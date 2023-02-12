@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio extra</title>
+</head>
+<body>
+    <h1>Brasileiro ou Estrangeiro:</h1>
+    Voce nasceu em: <input type="text" id="pais" placeholder="seu país" list="paises">
+    <datalist id="paises" > 
+        <option value="França"></option>
+        <option value="Brasil"></option>
+        <option value="Mexico"></option>
+        <option value="EUA"></option>
+    </datalist>
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="result">
+
+    </div>
+
+    <script>
+
+        function calcular(){
+        //var pais = window.document.querySelector('input#pais')
+        var local = (document.querySelector('input#pais').value)
+        var res = window.document.getElementById('result')
+        res.innerHTML = `Voce nasceu no país ${local}`
+        if (local == 'Brasil'){
+           res.innerHTML += '<p>Voce é brasileiro :)</p>'
+        } else{
+            res.innerHTML += '<p> Voce é estrangeiro</p>'
+        }
+    }
+    </script>
+
+</body>
+</html>
